@@ -14,5 +14,10 @@ def initialize(age, name='Unknown', parent_permission: true)
      def can_use_services?
         true if @age >= 18 || parent_permission == true
     end
+    
+    private 
 
+    def of_age?
+        @age >= 18
+    end
 end
