@@ -10,4 +10,9 @@ def initialize(age, name='Unknown', parent_permission: true)
     attr_reader :id
 
     attr_accessor :name, :age
+
+     def can_use_services?
+        true if @age >= 18 || parent_permission == true
+    end
+
 end
