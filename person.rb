@@ -6,4 +6,8 @@ def initialize(age, name='Unknown', parent_permission: true)
         @age = age
         @parent_permission = parent_permission
     end
+
+    attr_reader :id
+
+    attr_accessor :name, :age
 end
