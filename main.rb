@@ -4,6 +4,16 @@ class App
     @books = []
   end
 
+   def choices
+    puts '1  List all book'
+    puts '2  List all People'
+    puts '3  Create a person'
+    puts '4  Create a book'
+    puts '5  Create a rental'
+    puts '6  List all rentals for a given person id'
+    puts '7  Exit'
+  end
+
     def all_books
   end
 
