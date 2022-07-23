@@ -22,10 +22,12 @@ def selecting
   when '6'
     rental_list
   when '7'
-    puts 'Thank you for using our library app!'
+    puts 'Thank you for using the School library Application!'
     exit!
   else
-    puts 'Invalid input. Try again'
+    puts 'Invalid input. Try again!'
   end
   selecting
 end
+
+main

@@ -1,12 +1,11 @@
 class Rental
   attr_accessor :date, :person, :book
 
-  def initialize(date, person, book)
+  def initialize(date:, person:, book:)
     @date = date
     @person = person
-    book.rentals << self
-
+    person.add_rental(self)
     @book = book
-    person.rentals << self
+    book.add_rental(self)
   end
 end
