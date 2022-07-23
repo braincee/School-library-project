@@ -1,33 +1,36 @@
+# rubocop:disable Naming/PredicateName
 require './nameable'
+require './rental'
 
 class Person < Nameable
-  attr_accessor :name, :age
   attr_reader :id, :rentals
+  attr_accessor :name, :age, :parent_permission
 
   def initialize(age, name = 'Unknown', parent_permission: true)
-    super()
-    @id = Random.rand(1..100)
+    @id = Random.rand(1...1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
     @rentals = []
+    super()
   end
 
   def can_use_services?
-    true if @age >= 18 || parent_permission == true
-  end
-
-  private
-
-  def of_age?
-    @age >= 18
+    @parent_permission || is_of_age?
   end
 
   def correct_name
     @name
   end
 
-  def add_rental(date, person)
-    Rental.new(date, person, self)
+  def add_rental(date, book)
+    Rental.new(date, self, book)
+  end
+
+  private
+
+  def is_of_age?
+    @age > 18
   end
 end
+# rubocop:enable Naming/PredicateName
