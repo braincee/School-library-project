@@ -15,4 +15,7 @@ class App
 
    def create_teacher
   end
+
+  def create_student
+  end
 end
