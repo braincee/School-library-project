@@ -14,6 +14,9 @@ class App
     puts '7  Exit'
   end
 
+   def make(choices)
+  end
+
     def all_books
   end
 
