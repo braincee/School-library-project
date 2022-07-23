@@ -18,6 +18,11 @@ class App
   end
 
   def people_list
+
+  end
+
+  def create_person
+    
   end
 end
 
