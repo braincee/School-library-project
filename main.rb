@@ -6,4 +6,7 @@ class App
 
     def all_books
   end
+
+  def all_people
+  end
 end
