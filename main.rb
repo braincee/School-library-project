@@ -18,4 +18,7 @@ class App
 
   def create_student
   end
+
+   def create_book
+  end
 end
