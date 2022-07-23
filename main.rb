@@ -9,4 +9,7 @@ class App
 
   def all_people
   end
+
+   def create_person
+  end
 end
