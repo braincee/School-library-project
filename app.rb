@@ -22,7 +22,7 @@ class App
     puts "There are #{@books.length} books available"
 
     @books.each_with_index do |book, index|
-      puts "#{index + 1}) Title: \"#{book.title}\" | Author: #{book.author}"
+      puts "#{index + 1}) Title: \"#{book.title}\" , Author: #{book.author}"
     end
   end
 
@@ -31,17 +31,17 @@ class App
     puts "#{@people.length} peoples added."
 
     @people.each_with_index do |person, index|
-      puts "#{index + 1})[#{person.class}] Name: #{person.name} | Age: #{person.age} | ID: #{person.id}"
+      puts "#{index + 1})[#{person.class}] Name: #{person.name} , Age: #{person.age} , ID: #{person.id}"
     end
   end
 
   def create_person
-    puts 'Would like to create student (1) or teacher (2)'
-    choice = gets.chomp
+    puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]:'
+    choice = gets.chomp()
     puts 'Name:'
-    name = gets.chomp
+    name = gets.chomp()
     puts 'Age:'
-    age = gets.chomp.to_i
+    age = gets.chomp().to_i
 
     case choice
     when '1'
@@ -54,8 +54,8 @@ class App
   end
 
   def create_student(age:, name:)
-    puts 'Parent permission [Y/N]'
-    choice = gets.chomp.downcase
+    puts 'Has parent permission? [Y/N]:'
+    choice = gets.chomp().downcase
 
     case choice
     when 'y'
@@ -71,7 +71,7 @@ class App
 
   def create_teacher(age:, name:)
     puts 'Please add your specialization:'
-    specialization = gets.chomp
+    specialization = gets.chomp()
     teacher = Teacher.new(age: age, name: name, specialization: specialization)
     @people << teacher
     puts 'Teacher created successfully!!'
@@ -79,9 +79,9 @@ class App
 
   def create_book
     puts 'Title:'
-    title = gets.chomp
+    title = gets.chomp()
     puts 'Author:'
-    author = gets.chomp
+    author = gets.chomp()
 
     if title != '' && author != ''
       book = Book.new(title, author)
@@ -96,45 +96,45 @@ class App
     if @books.empty? && @people.empty?
       puts 'No books and People available'
     else
-      puts 'Choose the number of the book you want to rent:'
+      puts 'Select a book from the following list by number:'
       @books.each_with_index do |book, index|
-        puts "#{index + 1}: Title: #{book.title} | Author: #{book.author}"
+        puts "#{index + 1}: Title: #{book.title} , Author: #{book.author}"
       end
-      book_id = gets.chomp.to_i - 1
+      book_id = gets.chomp().to_i - 1
       choosen_book = @books[book_id]
 
       puts 'Type your ID:'
       @people.each do |person|
-        puts "[#{person.class}] Name: #{person.name} | Age: #{person.age} | ID: #{person.id}"
+        puts "[#{person.class}] Name: #{person.name} , Age: #{person.age} , ID: #{person.id}"
       end
-      renter_id = gets.chomp.to_i
+      renter_id = gets.chomp().to_i
       renter = @people.select { |person| person.id == renter_id }.first
 
-      print 'Enter the date[yyyy-mm-dd]: '
-      date = gets.chomp.to_s
+      print 'DATE [YY/MM/DD]: '
+      date = gets.chomp().to_s
       rental = Rental.new(date: date, person: renter, book: choosen_book)
       @rentals << rental
-      puts 'Book rented successfully!!'
+      puts 'Rental created successfully!!'
     end
   end
 
   def rental_list
     puts 'No rentals available!' if @rentals.empty?
     print 'To view your rentals, type your ID: '
-    id = gets.chomp.to_i
+    id = gets.chomp().to_i
     rental = @rentals.select { |rent| rent.person.id == id }
     if rental.empty?
       puts 'No rentals for this person'
     else
       puts 'Here are your records: '
       rental.each_with_index do |rcrd, index|
-        puts "#{index + 1}| Date: #{rcrd.date} | Borrower: #{rcrd.person.name} | Status: #{rcrd.person.class} | Borrowed book: \"#{rcrd.book.title}\" by #{rcrd.book.author}"
+        puts "#{index + 1}| Date: #{rcrd.date} , Borrower: #{rcrd.person.name} , Status: #{rcrd.person.class} | Borrowed book: \"#{rcrd.book.title}\" by #{rcrd.book.author}"
       end
     end
   end
 
   def choices
-    puts "Please an option by selecting a number:
+    puts "Please choose an option by entering a number:
            1. List all books
            2. List all people
            3. Create person account
