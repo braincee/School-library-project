@@ -30,6 +30,10 @@ class App
   end
 
   def create_teacher
+
+  end
+
+  def create_book
     
   end
 
