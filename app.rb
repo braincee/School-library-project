@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+# rubocop:disable Metrics/CyclomaticComplexity, Metrics/ClassLength
 require './book'
 require './classroom'
 require './base_decorator'
@@ -107,7 +109,8 @@ class App
       @people.each do |person|
         puts "[#{person.class}] Name: #{person.name} | Age: #{person.age} | ID: #{person.id}"
       end
-      renter_id = gets.chomp.to_i renter = @people.select { |person| person.id == renter_id }.first
+      renter_id = gets.chomp.to_i 
+      renter = @people.select { |person| person.id == renter_id }.first
 
       print 'Enter the date[yyyy-mm-dd]: '
       date = gets.chomp.to_s
@@ -146,3 +149,4 @@ class App
     gets.chomp
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity, Metrics/ClassLength
