@@ -22,7 +22,10 @@ class App
   end
 
   def create_person
-    
+
+  end
+
+  def create_student
   end
 end
 
