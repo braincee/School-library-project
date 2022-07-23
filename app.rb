@@ -38,6 +38,14 @@ class App
   end
 
   def new_rental
+
+  end
+
+  def rental_list
+
+  end
+  
+  def choices
     
   end
 
