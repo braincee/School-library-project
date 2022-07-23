@@ -21,13 +21,15 @@ def selecting
     new_rental
   when '6'
     rental_list
-  when '7'
-    puts 'Thank you for using the School library Application!'
-    exit!
   else
-    puts 'Invalid input. Try again!'
+    exit_app
   end
   selecting
+end
+
+def exit_app
+  puts 'Thanks for using the School Application!'
+  exit
 end
 
 main
