@@ -14,7 +14,10 @@ class App
   end
 
   def books_list
-    
+
+  end
+
+  def people_list
   end
 end
 
