@@ -21,4 +21,7 @@ class App
 
    def create_book
   end
+
+  def create_rental
+  end
 end
