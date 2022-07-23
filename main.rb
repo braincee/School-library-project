@@ -12,4 +12,7 @@ class App
 
    def create_person
   end
+
+   def create_teacher
+  end
 end
