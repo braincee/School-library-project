@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 # rubocop:disable Metrics/CyclomaticComplexity, Metrics/ClassLength
 require './student'
 require './teacher'
