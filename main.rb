@@ -41,4 +41,8 @@ class App
    def list_of_rental
     
 end
+
+def main
+end
+
 end
