@@ -24,4 +24,8 @@ class App
 
   def create_rental
   end
+
+   def list_of_rental
+    
+end
 end
