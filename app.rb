@@ -34,6 +34,10 @@ class App
   end
 
   def create_book
+
+  end
+
+  def new_rental
     
   end
 
