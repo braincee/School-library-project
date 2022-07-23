@@ -26,6 +26,12 @@ class App
   end
 
   def create_student
+
   end
+
+  def create_teacher
+    
+  end
+
 end
 
