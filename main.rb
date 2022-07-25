@@ -1,5 +1,6 @@
 require_relative 'app'
 require_relative 'input_details'
+require_relative 'list_details'
 
 @my_app = App.new
 
@@ -26,6 +27,9 @@ end
 
 def select_option(option)
   case option
+  when 1..2, 6
+    list_details(option)
+    main
   when 3..5
     input_details(option)
     main
