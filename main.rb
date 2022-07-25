@@ -1,0 +1,7 @@
+require './teacher'
+require './student'
+require './person'
+require './book'
+require './capitalize_decorator'
+require './trimmer_decorator'
+require './rental'
