@@ -45,11 +45,19 @@ $ git clone https://github.com/braincee/School-library-project.git
 
 Kindly modify the files as needed.
 
-👤 **Author**
+### **Authors**
+
+👤 **Stephen Annor**
 
 - GitHub: [braincee](https://github.com/braincee)
 - Twitter: [annor0543](https://twitter.com/annor0543)
 - LinkedIn: [Stephen Annor](https://www.linkedin.com/stephen-annor)
+
+👤 **Eric Mahare**
+
+- GitHub: [@erikmahare](https://github.com/ericmahare) 
+- Twitter: [@erikmahare](https://twitter.com/erikmahare) 
+- LinkedIn: [Eric Mahare](https://www.linkedin.com/in/eric-mahare-358944183/) 
 
 ## 🤝 Contributing
 
