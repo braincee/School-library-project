@@ -26,6 +26,9 @@ end
 
 def select_option(option)
   case option
+  when 3..5
+    input_details(option)
+    main
   when 7
     puts 'Goodbye'
     exit
