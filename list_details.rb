@@ -11,12 +11,15 @@ def list_details(option)
     main
   end
 end
+
 def select_all_books
   @my_app.all_books.map { |book| puts "Title: #{book.title}, Author: #{book.author}" }
 end
+
 def select_all_people
   @my_app.all_people.map { |person| puts "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
 end
+
 def list_rental_by_person_id
   print 'ID of person: '
   person_id = $stdin.gets.to_i
