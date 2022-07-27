@@ -1,9 +1,13 @@
+#!/usr/bin/env ruby
+
 require_relative 'app'
 require_relative 'input_details'
 require_relative 'list_details'
+require './save_data'
+require './read_data'
 
 @my_app = App.new
-
+read_data
 def main
   app_description
 
@@ -35,9 +39,11 @@ def select_option(option)
     main
   when 7
     puts 'Goodbye'
+    save_data
     exit
   else
     puts 'Choose a correct option'
+    main
   end
 end
 
