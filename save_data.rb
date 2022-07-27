@@ -11,7 +11,9 @@ def save_book
     { book_instance: 'Book', title: book.title, author: book.author }
   end
   books = JSON.generate(list_array)
-  File.write('books.json', books)
+  fJson = File.open("books.json","w")
+  fJson.write(books)
+  fJson.close
 end
 
 def save_person
@@ -25,7 +27,9 @@ def save_person
     end
   end
   people = JSON.generate(list_people)
-  File.write('people.json', people)
+  fJson = File.open("people.json","w")
+  fJson.write(people)
+  fJson.close
 end
 
 def save_rental
@@ -33,5 +37,7 @@ def save_rental
     { rental_instance: 'Rental', date: rental.date, book_title: rental.book.title, person_id: rental.person.id }
   end
   rentals = JSON.generate(list_rentals)
-  File.write('rentals.json', rentals)
+  fJson = File.open("rentals.json","w")
+  fJson.write(rentals)
+  fJson.close
 end
