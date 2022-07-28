@@ -39,6 +39,20 @@ In the terminal, go to your file directory and run this command.
 
 ```
 $ git clone https://github.com/braincee/School-library-project.git
+
+```
+
+### Run tests
+
+To install rspec, in the terminal kindly run this command
+
+```
+$ gem install rspec
+```
+
+To run tests, please run this command
+```
+$ bundle exec rspec
 ```
 
 ### Usage
