@@ -10,10 +10,10 @@ describe Rental do
   end
 
   it 'should add data to person rentals' do
-    expect(@person.rentals.length).to be(1)  
+    expect(@person.rentals.length).to be(1)
   end
 
   it 'should add data to book rentals' do
-    expect(@book.rentals.length).to be(1)  
+    expect(@book.rentals.length).to be(1)
   end
 end
