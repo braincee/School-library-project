@@ -5,5 +5,9 @@ class Solver
     return n * factorial(n - 1)  if n > 0 
     return 1 if n == 0
   end
+
+  def reverse
+ 
+  end
 end
 
