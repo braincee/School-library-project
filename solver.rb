@@ -6,8 +6,10 @@ class Solver
     return 1 if n == 0
   end
 
-  def reverse
- 
+  def reverse(string)
+    return "Not a string" if string.class != String
+    return "No value specified" if string.empty? == true
+    string.reverse
   end
 end
 
