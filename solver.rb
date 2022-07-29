@@ -11,5 +11,8 @@ class Solver
     return "No value specified" if string.empty? == true
     string.reverse
   end
-end
 
+  def fizzbuzz(n)
+    
+  end 
+end

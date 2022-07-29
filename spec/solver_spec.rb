@@ -32,4 +32,22 @@ describe "Solver" do
       expect(value).to eq('cire')
     end
   end
+  context "fizzbuzz" do
+    it 'should return string when value is not divisible by 3 or 5' do 
+      value = @check.fizzbuzz(1)
+      expect(value).to eq('1')
+    end
+    it 'should return fizz when 3 is passed' do 
+      value = @check.fizzbuzz(1)
+      expect(value).to eq('1')
+    end
+    it 'should return buzz when 5 is passed' do 
+      value = @check.fizzbuzz(5)
+      expect(value).to eq('buzz')
+    end
+    it 'should return fizzbuzz when 15 is passed' do 
+      value = @check.fizzbuzz(15)
+      expect(value).to eq('fizzbuzz')
+    end
+  end
 end
